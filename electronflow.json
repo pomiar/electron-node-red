@@ -140,7 +140,6 @@
     {
         "id": "87356b62.92e3d8",
         "type": "ui_group",
-        "z": "",
         "name": "Text to Speech",
         "tab": "52a903f3.ad56fc",
         "order": 5,
@@ -151,7 +150,6 @@
     {
         "id": "c75ad4f0.0cede8",
         "type": "ui_group",
-        "z": "",
         "name": "Map",
         "tab": "52a903f3.ad56fc",
         "order": 3,
@@ -171,8 +169,8 @@
         "format": "<h3>Welcome to the <font color=\"#CE2020\">Node-RED</font> Dashboard</h3>\n<p>On the right you will see a graph and a chart logging data from the sliders underneath.</p>",
         "storeOutMessages": false,
         "fwdInMessages": false,
-        "x": 93,
-        "y": 45,
+        "x": 100,
+        "y": 40,
         "wires": [
             []
         ]
