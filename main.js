@@ -343,7 +343,8 @@ function createConsole() {
         autoHideMenuBar: true,
         // titleBarStyle: "hidden",
         webPreferences: {
-            nodeIntegration: true
+            nodeIntegration: true,
+            nativeWindowOpen: true
         }
     });
     conWindow.loadURL(url.format({
@@ -381,7 +382,8 @@ function createWindow() {
         // titleBarStyle: "hidden",
         kiosk: kioskMode,
         webPreferences: {
-            nodeIntegration: false
+            nodeIntegration: false,
+            nativeWindowOpen: true
         }
     });
 
@@ -538,7 +540,7 @@ if (process.platform === 'darwin') {
     app.setAboutPanelOptions({
         applicationVersion: pkg.version,
         version: pkg.dependencies["node-red"],
-        copyright: "Copyright © 2020 "+pkg.author.name,
+        copyright: "Copyright © 2021 "+pkg.author.name,
         credits: "Node-RED and other components are copyright the JS Foundation and other contributors."
     });
     // Don't show in the dock bar if you like

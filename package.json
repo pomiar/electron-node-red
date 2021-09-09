@@ -1,6 +1,6 @@
 {
     "name": "electron_node_red",
-    "version": "2.0.4",
+    "version": "2.0.6",
     "description": "Electron Node-RED application starter kit for development",
     "main": "main.js",
     "NRelectron": {
@@ -29,7 +29,7 @@
         "electron-is-dev": "^2.0.0",
         "electron-store": "^8.0.0",
         "express": "^4.17.1",
-        "node-red": "2.0.4",
+        "node-red": "2.0.6",
         "node-red-contrib-play-audio": "*",
         "node-red-contrib-web-worldmap": "*",
         "node-red-dashboard": "*",
@@ -53,13 +53,13 @@
     },
     "homepage": "https://github.com/dceejay/electron-node-red#readme",
     "devDependencies": {
-        "electron": "^12.0.13",
+        "electron": "^14.0.0",
         "electron-builder": "^22.11.7"
     },
     "build": {
         "appId": "com.electron.node-red",
         "productName": "Node-RED Electron",
-        "copyright": "Copyright © 2018,2020 D.Conway-Jones",
+        "copyright": "Copyright © 2018,2021 D.Conway-Jones",
         "buildDependenciesFromSource": true,
         "files": [
             "**/*",
