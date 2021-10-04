@@ -27,7 +27,7 @@
     },
     "dependencies": {
         "electron-is-dev": "^2.0.0",
-        "electron-store": "^8.0.0",
+        "electron-store": "^8.0.1",
         "express": "^4.17.1",
         "node-red": "2.0.6",
         "node-red-contrib-play-audio": "*",
@@ -53,7 +53,7 @@
     },
     "homepage": "https://github.com/dceejay/electron-node-red#readme",
     "devDependencies": {
-        "electron": "^14.0.0",
+        "electron": "^14.1.0",
         "electron-builder": "^22.11.7"
     },
     "build": {
@@ -66,6 +66,14 @@
             {
                 "from": "node_modules/@node-red/nodes/examples",
                 "to": "node_modules/@node-red/nodes/examples"
+            },
+            {
+                "from": "patch/registry/lib",
+                "to": "node_modules/@node-red/registry/lib"
+            },
+            {
+                "from": "patch/util/lib",
+                "to": "node_modules/@node-red/util/lib"
             }
         ],
         "fileAssociations": [
