@@ -1,6 +1,6 @@
 {
     "name": "electron_node_red",
-    "version": "2.1.4",
+    "version": "3.0.2",
     "description": "Electron Node-RED application starter kit for development",
     "main": "main.js",
     "NRelectron": {
@@ -38,7 +38,8 @@
         "node-red-node-geofence": "*",
         "node-red-node-random": "*",
         "node-red-node-rbe": "*",
-        "node-red-node-smooth": "*"
+        "node-red-node-smooth": "*",
+        "node-red-node-tail": "*"
     },
     "keywords": [
         "electron",
