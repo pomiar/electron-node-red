@@ -344,14 +344,16 @@ function createConsole() {
         // titleBarStyle: "hidden",
         webPreferences: {
             nodeIntegration: true,
-            nativeWindowOpen: true
+            nativeWindowOpen: true,
+            contextIsolation: false
         }
     });
-    conWindow.loadURL(url.format({
-        pathname: path.join(__dirname, urlconsole),
-        protocol: 'file:',
-        slashes: true
-    }))
+    // conWindow.loadURL(url.format({
+    //     pathname: path.join(__dirname, urlconsole),
+    //     protocol: 'file:',
+    //     slashes: true
+    // }))
+    conWindow.loadURL(path.join(__dirname, urlconsole));
     conWindow.webContents.on('did-finish-load', () => {
         conWindow.webContents.send('logBuff', logBuffer);
     });
