@@ -1,6 +1,6 @@
 {
     "name": "electron_node_red",
-    "version": "3.0.2",
+    "version": "3.1.0",
     "description": "Electron Node-RED application starter kit for development",
     "main": "main.js",
     "NRelectron": {
@@ -30,16 +30,9 @@
         "electron-store": "^8.0.1",
         "express": "^4.17.2",
         "fs-extra": "^11.1.0",
-        "node-red": "3.0.2",
-        "node-red-contrib-play-audio": "*",
-        "node-red-contrib-web-worldmap": "*",
-        "node-red-dashboard": "*",
-        "node-red-node-base64": "*",
-        "node-red-node-geofence": "*",
-        "node-red-node-random": "*",
-        "node-red-node-rbe": "*",
-        "node-red-node-smooth": "*",
-        "node-red-node-tail": "*"
+        "node-red": "^3.1.0",
+        "@kenke7/node-red-contrib-modbus": "5.28.1",
+        "node-red-dashboard": "*"
     },
     "keywords": [
         "electron",
@@ -106,7 +99,7 @@
         "win": {
             "target": [
                 {
-                    "target": "msi",
+                    "target": "portable",
                     "arch": [
                         "x64"
                     ]
