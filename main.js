@@ -29,8 +29,8 @@ if (options.start.toLowerCase() === "map") { urlStart = urlmap; }
 if (!packages.hasOwnProperty("node-red-contrib-web-worldmap")) { showMap = false; }
 
 // TCP port to use
-//const listenPort = "18880";                           // fix it if you like
-const listenPort = parseInt(Math.random()*16383+49152)  // or random ephemeral port
+const listenPort = "18880";                           // fix it if you like
+//const listenPort = parseInt(Math.random()*16383+49152)  // or random ephemeral port
 
 const os = require('os');
 const fs = require('fs');
@@ -117,10 +117,10 @@ if (urlStart == urlmap && myFlow.indexOf("worldmap") == -1) { urlStart = urledit
 if (urlStart == urldash && myFlow.indexOf("ui_base") == -1) { urlStart = urledit; }
 myFlow = null;
 
-// console.log("CWD",process.cwd());
-// console.log("DIR",__dirname);
-// console.log("UserDir :",userdir);
-// console.log("PORT",listenPort);
+console.log("CWD",process.cwd());
+console.log("DIR",__dirname);
+console.log("UserDir :",userdir);
+console.log("PORT",listenPort);
 console.log("Store",app.getPath('userData'))
 console.log("FlowFile :",flowfile);
 
@@ -144,11 +144,15 @@ var settings = {
     userDir: userdir,
     flowFile: flowfile,
     flowFilePretty: true,
-    autoInstallModules: true,
+	externalModules: {
+		autoInstall: true,   /** Whether the runtime will attempt to automatically install missing modules */
+		// autoInstallRetry: 30, /** Interval, in seconds, between reinstall attempts */
+		palette: {              /** Configuration for the Palette Manager */
+		     allowInstall: addNodes }
+     },
     editorTheme: {
         projects:{ enabled:false },
-        header: { title: options.productName },
-        palette: { editable:addNodes }
+        header: { title: options.productName }
     },    // enable projects feature
     functionGlobalContext: { },    // enables global context - add extras ehre if you need them
     functionExternalModules: true,
